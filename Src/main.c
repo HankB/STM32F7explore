@@ -45,6 +45,7 @@
 #include "stm32f7xx_hal.h"
 #include "cmsis_os.h"
 #include "ltdc.h"
+#include "lwip.h"
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */

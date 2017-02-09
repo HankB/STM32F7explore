@@ -45,9 +45,9 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "cmsis_os.h"
-#include "stm32f7xx_hal.h"
 
 /* USER CODE BEGIN Includes */     
+#include "stm32f7xx_hal.h"
 
 /* USER CODE END Includes */
 
@@ -63,6 +63,7 @@ osThreadId BlinkyTaskHandle;
 void StartDefaultTask(void const * argument);
 void ExecBlinkyTask(void const * argument);
 
+extern void MX_LWIP_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* USER CODE BEGIN FunctionPrototypes */
@@ -111,6 +112,8 @@ void MX_FREERTOS_Init(void) {
 /* StartDefaultTask function */
 void StartDefaultTask(void const * argument)
 {
+  /* init code for LWIP */
+  MX_LWIP_Init();
 
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
@@ -130,7 +133,7 @@ void ExecBlinkyTask(void const * argument)
   {
 	  HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
 	  __NOP();
-	  osDelay(100);
+	  vTaskDelay(250);
   }
   /* USER CODE END ExecBlinkyTask */
 }
