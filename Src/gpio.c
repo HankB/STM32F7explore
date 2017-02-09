@@ -5,29 +5,39 @@
   *                      of all used GPIO pins.
   ******************************************************************************
   *
-  * COPYRIGHT(c) 2017 STMicroelectronics
+  * Copyright (c) 2017 STMicroelectronics International N.V. 
+  * All rights reserved.
   *
-  * Redistribution and use in source and binary forms, with or without modification,
-  * are permitted provided that the following conditions are met:
-  *   1. Redistributions of source code must retain the above copyright notice,
-  *      this list of conditions and the following disclaimer.
-  *   2. Redistributions in binary form must reproduce the above copyright notice,
-  *      this list of conditions and the following disclaimer in the documentation
-  *      and/or other materials provided with the distribution.
-  *   3. Neither the name of STMicroelectronics nor the names of its contributors
-  *      may be used to endorse or promote products derived from this software
-  *      without specific prior written permission.
+  * Redistribution and use in source and binary forms, with or without 
+  * modification, are permitted, provided that the following conditions are met:
   *
-  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  * 1. Redistribution of source code must retain the above copyright notice, 
+  *    this list of conditions and the following disclaimer.
+  * 2. Redistributions in binary form must reproduce the above copyright notice,
+  *    this list of conditions and the following disclaimer in the documentation
+  *    and/or other materials provided with the distribution.
+  * 3. Neither the name of STMicroelectronics nor the names of other 
+  *    contributors to this software may be used to endorse or promote products 
+  *    derived from this software without specific written permission.
+  * 4. This software, including modifications and/or derivative works of this 
+  *    software, must execute solely and exclusively on microcontroller or
+  *    microprocessor devices manufactured by or for STMicroelectronics.
+  * 5. Redistribution and use of this software other than as permitted under 
+  *    this license is void and will automatically terminate your rights under 
+  *    this license. 
+  *
+  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+  * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
+  * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
   ******************************************************************************
   */
@@ -45,8 +55,12 @@
 
 /* USER CODE END 1 */
 
-/** Configure pins
-     PE4   ------> LTDC_B0
+/** Configure pins as 
+        * Analog 
+        * Input 
+        * Output
+        * EVENT_OUT
+        * EXTI
      PE2   ------> QUADSPI_BK1_IO2
      PG14   ------> ETH_TXD1
      PE1   ------> FMC_NBL1
@@ -65,62 +79,41 @@
      PB6   ------> QUADSPI_BK1_NCS
      PG15   ------> FMC_SDNCAS
      PG11   ------> ETH_TX_EN
-     PJ13   ------> LTDC_B1
      PD0   ------> FMC_D2_DA2
      PC11   ------> SDMMC1_D3
      PC10   ------> SDMMC1_D2
      PA12   ------> USB_OTG_FS_DP
      PI4   ------> SAI2_MCLK_A
-     PK7   ------> LTDC_DE
-     PK6   ------> LTDC_B7
-     PK5   ------> LTDC_B6
-     PG12   ------> LTDC_B4
      PG10   ------> SAI2_SD_B
-     PJ14   ------> LTDC_B2
      PD3   ------> DCMI_D5
      PD1   ------> FMC_D3_DA3
      PA11   ------> USB_OTG_FS_DM
      PF0   ------> FMC_A0
      PI5   ------> SAI2_SCK_A
      PI7   ------> SAI2_FS_A
-     PI10   ------> LTDC_HSYNC
      PI6   ------> SAI2_SD_A
-     PK4   ------> LTDC_B5
      PG9   ------> DCMI_VSYNC
-     PJ15   ------> LTDC_B3
      PD2   ------> SDMMC1_CMD
      PA10   ------> USB_OTG_FS_ID
      PF1   ------> FMC_A1
-     PI9   ------> LTDC_VSYNC
      PH14   ------> DCMI_D4
      PI0   ------> S_TIM5_CH4
      PA9   ------> USART1_TX
-     PK1   ------> LTDC_G6
-     PK2   ------> LTDC_G7
      PC9   ------> SDMMC1_D1
      PA8   ------> S_TIM1_CH1
      PF2   ------> FMC_A2
-     PI15   ------> LTDC_R0
-     PJ11   ------> LTDC_G4
-     PK0   ------> LTDC_G5
      PC8   ------> SDMMC1_D0
      PC7   ------> USART6_RX
      PF3   ------> FMC_A3
-     PI14   ------> LTDC_CLK
      PH4   ------> USB_OTG_HS_ULPI_NXT
-     PJ8   ------> LTDC_G1
-     PJ10   ------> LTDC_G3
      PG8   ------> FMC_SDCLK
      PC6   ------> USART6_TX
      PF4   ------> FMC_A4
      PH5   ------> FMC_SDNWE
      PH3   ------> FMC_SDNE0
-     PJ7   ------> LTDC_G0
-     PJ9   ------> LTDC_G2
      PF7   ------> ADC3_IN5
      PF6   ------> ADC3_IN4
      PF5   ------> FMC_A5
-     PJ6   ------> LTDC_R7
      PD15   ------> FMC_D1_DA1
      PB13   ------> USB_OTG_HS_ULPI_D6
      PD10   ------> FMC_D15_DA15
@@ -139,10 +132,8 @@
      PF12   ------> FMC_A6
      PG1   ------> FMC_A11
      PF15   ------> FMC_A9
-     PJ4   ------> LTDC_R5
      PD12   ------> QUADSPI_BK1_IO1
      PD13   ------> QUADSPI_BK1_IO3
-     PJ5   ------> LTDC_R6
      PH12   ------> DCMI_D3
      PA1   ------> ETH_REF_CLK
      PA0/WKUP   ------> ADCx_IN0
@@ -150,7 +141,6 @@
      PC4   ------> ETH_RXD0
      PF13   ------> FMC_A7
      PG0   ------> FMC_A10
-     PJ3   ------> LTDC_R4
      PE8   ------> FMC_D5_DA5
      PD11   ------> QUADSPI_BK1_IO0
      PG5   ------> FMC_A15_BA1
@@ -163,7 +153,6 @@
      PA5   ------> USB_OTG_HS_ULPI_CK
      PC5   ------> ETH_RXD1
      PF14   ------> FMC_A8
-     PJ2   ------> LTDC_R3
      PF11   ------> FMC_SDNRAS
      PE9   ------> FMC_D6_DA6
      PE11   ------> FMC_D8_DA8
@@ -176,8 +165,6 @@
      PA7   ------> ETH_CRS_DV
      PB1   ------> USB_OTG_HS_ULPI_D2
      PB0   ------> USB_OTG_HS_ULPI_D1
-     PJ0   ------> LTDC_R1
-     PJ1   ------> LTDC_R2
      PE7   ------> FMC_D4_DA4
      PE10   ------> FMC_D7_DA7
      PE12   ------> FMC_D9_DA9
@@ -219,14 +206,6 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOG, ARDUINO_D4_Pin|ARDUINO_D2_Pin|EXT_RST_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : PtPin */
-  GPIO_InitStruct.Pin = LCD_B0_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
-  HAL_GPIO_Init(LCD_B0_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = OTG_HS_OverCurrent_Pin;
@@ -348,20 +327,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF12_FMC;
   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PJPin PJPin PJPin PJPin 
-                           PJPin PJPin PJPin PJPin 
-                           PJPin PJPin PJPin PJPin 
-                           PJPin PJPin PJPin */
-  GPIO_InitStruct.Pin = LCD_B1_Pin|LCD_B2_Pin|LCD_B3_Pin|LCD_G4_Pin 
-                          |LCD_G1_Pin|LCD_G3_Pin|LCD_G0_Pin|LCD_G2_Pin 
-                          |LCD_R7_Pin|LCD_R5_Pin|LCD_R6_Pin|LCD_R4_Pin 
-                          |LCD_R3_Pin|LCD_R1_Pin|LCD_R2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
-  HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
-
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = OTG_FS_VBUS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -399,24 +364,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.Alternate = GPIO_AF10_SAI2;
   HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PKPin PKPin PKPin PKPin 
-                           PKPin PKPin PKPin */
-  GPIO_InitStruct.Pin = LCD_DE_Pin|LCD_B7_Pin|LCD_B6_Pin|LCD_B5_Pin 
-                          |LCD_G6_Pin|LCD_G7_Pin|LCD_G5_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
-  HAL_GPIO_Init(GPIOK, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PtPin */
-  GPIO_InitStruct.Pin = LCD_B4_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF9_LTDC;
-  HAL_GPIO_Init(LCD_B4_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = SAI2_SDB_Pin;
@@ -465,14 +412,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   GPIO_InitStruct.Alternate = GPIO_AF12_FMC;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PIPin PIPin PIPin PIPin */
-  GPIO_InitStruct.Pin = LCD_HSYNC_Pin|LCD_VSYNC_Pin|LCD_R0_Pin|LCD_CLK_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
-  HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = LCD_BL_CTRL_Pin;
