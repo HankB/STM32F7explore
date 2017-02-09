@@ -1,0 +1,6 @@
+*.o
+*.d
+*.swp
+Debug/
+Backup/
+
