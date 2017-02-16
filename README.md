@@ -1,0 +1,1 @@
+Clone with `git clone ssh://git@oak:2222/hbarta/STM32F7explore.git`
