@@ -47,6 +47,7 @@
 #include "ltdc.h"
 #include "lwip.h"
 #include "gpio.h"
+#include "lcd_log.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -244,6 +245,34 @@ void assert_failed(uint8_t* file, uint32_t line)
 }
 
 #endif
+/**
+  * @brief  Initializes the STM327546G-Discovery's LCD  resources.
+  * @param  None
+  * @retval None
+  * Copied from LwIP_HTTP_Server_Netconn_RTOS example project
+  */
+static void BSP_Config(void)
+{
+  /* Initialize the LCD */
+  BSP_LCD_Init();
+
+  /* Initialize the LCD Layers */
+  BSP_LCD_LayerDefaultInit(1, LCD_FB_START_ADDRESS);
+
+  /* Set LCD Foreground Layer  */
+  BSP_LCD_SelectLayer(1);
+
+  BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
+
+  /* Initialize LCD Log module */
+  LCD_LOG_Init();
+
+  /* Show Header and Footer texts */
+  LCD_LOG_SetHeader((uint8_t *)"Webserver Application Netconn API");
+  LCD_LOG_SetFooter((uint8_t *)"STM32746G-DISCO board");
+
+  LCD_UsrLog ((char *)"  State: Ethernet Initialization ...\n");
+}
 
 /**
   * @}
