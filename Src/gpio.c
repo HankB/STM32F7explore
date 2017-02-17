@@ -100,11 +100,9 @@
      PA8   ------> S_TIM1_CH1
      PF2   ------> FMC_A2
      PC8   ------> SDMMC1_D0
-     PC7   ------> USART6_RX
      PF3   ------> FMC_A3
      PH4   ------> USB_OTG_HS_ULPI_NXT
      PG8   ------> FMC_SDCLK
-     PC6   ------> USART6_TX
      PF4   ------> FMC_A4
      PH5   ------> FMC_SDNWE
      PH3   ------> FMC_SDNE0
@@ -477,14 +475,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PC7 PC6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_6;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF8_USART6;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PH4 */
   GPIO_InitStruct.Pin = GPIO_PIN_4;

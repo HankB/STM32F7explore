@@ -44,10 +44,11 @@
 #include "main.h"
 #include "stm32f7xx_hal.h"
 #include "cmsis_os.h"
+#include "dma2d.h"
 #include "ltdc.h"
 #include "lwip.h"
+#include "usart.h"
 #include "gpio.h"
-#include "lcd_log.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -91,6 +92,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_LTDC_Init();
+  MX_DMA2D_Init();
+  MX_USART6_UART_Init();
 
   /* USER CODE BEGIN 2 */
 
@@ -162,13 +165,14 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC|RCC_PERIPHCLK_USART6;
   PeriphClkInitStruct.PLLSAI.PLLSAIN = 192;
   PeriphClkInitStruct.PLLSAI.PLLSAIR = 2;
   PeriphClkInitStruct.PLLSAI.PLLSAIQ = 2;
   PeriphClkInitStruct.PLLSAI.PLLSAIP = RCC_PLLSAIP_DIV2;
   PeriphClkInitStruct.PLLSAIDivQ = 1;
   PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_2;
+  PeriphClkInitStruct.Usart6ClockSelection = RCC_USART6CLKSOURCE_PCLK2;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -245,34 +249,6 @@ void assert_failed(uint8_t* file, uint32_t line)
 }
 
 #endif
-/**
-  * @brief  Initializes the STM327546G-Discovery's LCD  resources.
-  * @param  None
-  * @retval None
-  * Copied from LwIP_HTTP_Server_Netconn_RTOS example project
-  */
-static void BSP_Config(void)
-{
-  /* Initialize the LCD */
-  BSP_LCD_Init();
-
-  /* Initialize the LCD Layers */
-  BSP_LCD_LayerDefaultInit(1, LCD_FB_START_ADDRESS);
-
-  /* Set LCD Foreground Layer  */
-  BSP_LCD_SelectLayer(1);
-
-  BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
-
-  /* Initialize LCD Log module */
-  LCD_LOG_Init();
-
-  /* Show Header and Footer texts */
-  LCD_LOG_SetHeader((uint8_t *)"Webserver Application Netconn API");
-  LCD_LOG_SetFooter((uint8_t *)"STM32746G-DISCO board");
-
-  LCD_UsrLog ((char *)"  State: Ethernet Initialization ...\n");
-}
 
 /**
   * @}
