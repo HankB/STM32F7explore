@@ -2,7 +2,7 @@
 Start a project for the STM32F746G-DISCO board using STM32CubeMX (AKA MX) and
 add board support for LCD. Development platform is Linux.
 
-## REQUIREMENTS ###
+## Requirements ###
 * Eclipse Neon (and Java)
 * OpenSTM32 Eclipse add ons (http://www.openstm32.org/)
 * STM32CubeMX (http://www.st.com/en/development-tools/stm32cubemx.html)
