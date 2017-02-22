@@ -15,3 +15,7 @@ add board support for LCD. Development platform is Linux.
 Initial commit - generate code from MX (4.19) after selecting board and making no changes
 
 Clone with `git clone ssh://git@oak:2222/hbarta/STM32F7explore.git` (My private repo only)
+
+### License ###
+License to the bulk of this code belongs to the original contributors. To the the best of my knowledge 
+All licenses form the variopus libraries and packages have been preserved and included in this repo.
