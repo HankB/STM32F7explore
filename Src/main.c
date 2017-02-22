@@ -49,6 +49,7 @@
 #include "lwip.h"
 #include "usart.h"
 #include "gpio.h"
+#include "lcd_log.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -72,6 +73,33 @@ void MX_FREERTOS_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+/**
+  * @brief  Initializes the STM327546G-Discovery's LCD  resources.
+  * @param  None
+  * @retval None
+  */
+static void BSP_Config(void)
+{
+  /* Initialize the LCD */
+  BSP_LCD_Init();
+
+  /* Initialize the LCD Layers */
+  BSP_LCD_LayerDefaultInit(1, LCD_FB_START_ADDRESS);
+
+  /* Set LCD Foreground Layer  */
+  BSP_LCD_SelectLayer(1);
+
+  BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
+
+  /* Initialize LCD Log module */
+  LCD_LOG_Init();
+
+  /* Show Header and Footer texts */
+  LCD_LOG_SetHeader((uint8_t *)"Webserver Application Netconn API");
+  LCD_LOG_SetFooter((uint8_t *)"STM32746G-DISCO board");
+
+  LCD_UsrLog ((char *)"  State: Ethernet Initialization ...\n");
+}
 
 /* USER CODE END 0 */
 
@@ -96,6 +124,9 @@ int main(void)
   MX_USART6_UART_Init();
 
   /* USER CODE BEGIN 2 */
+
+  /* Initialize LCD */
+  BSP_Config();
 
   /* USER CODE END 2 */
 
