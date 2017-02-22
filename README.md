@@ -2,10 +2,19 @@
 Start a project for the STM32F746G-DISCO board using STM32CubeMX (AKA MX) and
 add board support for LCD. Development platform is Linux.
 
-## Requirements ###
+### Requirements ###
 * Eclipse Neon (and Java)
 * OpenSTM32 Eclipse add ons (http://www.openstm32.org/)
 * STM32CubeMX (http://www.st.com/en/development-tools/stm32cubemx.html)
+
+### Procedure ###
+Clone project somewhere convenient
+  `mkdir stm_workspace && cd $_`
+  `git clone git@github.com:HankB/STM32F7explore.git`
+Open Eclipse and change to `stm_workspace`.
+File > Open Projects from Filesystem and navigate to `.../stm_workspace/STM32F7explore`
+Select project and click "Finish"
+Enjoy! (or not...)
 
 ### Status ###
 * Ethernet working
@@ -18,4 +27,4 @@ Clone with `git clone ssh://git@oak:2222/hbarta/STM32F7explore.git` (My private 
 
 ### License ###
 License to the bulk of this code belongs to the original contributors. To the the best of my knowledge 
-All licenses form the variopus libraries and packages have been preserved and included in this repo.
+all licenses from the various libraries and packages have been preserved and included in this repo.
