@@ -8,13 +8,14 @@ add board support for LCD. Development platform is Linux.
 * STM32CubeMX (http://www.st.com/en/development-tools/stm32cubemx.html)
 
 ### Procedure ###
-Clone project somewhere convenient
+* Clone project somewhere convenient
+
   `mkdir stm_workspace && cd $_`
   `git clone git@github.com:HankB/STM32F7explore.git`
-Open Eclipse and change to `stm_workspace`.
-File > Open Projects from Filesystem and navigate to `.../stm_workspace/STM32F7explore`
-Select project and click "Finish"
-Enjoy! (or not...)
+* Open Eclipse and change to `stm_workspace`.
+* File > Open Projects from Filesystem and navigate to `.../stm_workspace/STM32F7explore`
+* Select project and click "Finish"
+* Enjoy! (or not...)
 
 ### Status ###
 * Ethernet working
